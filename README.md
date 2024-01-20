@@ -75,7 +75,47 @@ hello
 % 
 ```
 
-### 
+## Starting and Stopping the database
+
+The database admin name and passwords are stored in the `docker-compose.yaml` file.  This isn't secure but this presumes that the data is not being shared beyond your own laptop :-) 
+
+to start the postgres database:
+```
+docker-compose up -d
+```
+
+to stop it:
+```
+docker-compose down
+```
+
+## connecting to the database using pgadmin
+
+Open http://localhost:5050 
+
+<paste the image here of login>
+
+Click "add a new server"
+<paste link to image>
+
+In General:
+  set Name = "docker"
+In Connection:
+  set host name = "postgres_db"
+  port = 5432
+  username = admin
+  password = adminadmin
+
+Save
+
+## Configure your python env 
+
+
+```
+pip install pandas
+pip install psycopg2-binary 
+```
+
 
 ### got dramas?
 
